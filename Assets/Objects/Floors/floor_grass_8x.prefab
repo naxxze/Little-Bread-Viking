@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6580701924384791400}
   m_Layer: 0
-  m_Name: floor_8x
+  m_Name: floor_grass_8x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3282145797033539134, guid: 2ea38284d8bbcb046b9e0b1d63e84579, type: 3}
       propertyPath: m_Name
-      value: floor_4x (1)
+      value: floor_grass_4x (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea38284d8bbcb046b9e0b1d63e84579, type: 3}
@@ -147,7 +147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3282145797033539134, guid: 2ea38284d8bbcb046b9e0b1d63e84579, type: 3}
       propertyPath: m_Name
-      value: floor_4x
+      value: floor_grass_4x
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea38284d8bbcb046b9e0b1d63e84579, type: 3}

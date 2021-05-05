@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650747203799555892}
   m_Layer: 0
-  m_Name: floor_4x
+  m_Name: floor_grass_4x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2451296597993185189, guid: d02553e113709bc48b1976cc590342c3, type: 3}
       propertyPath: m_Name
-      value: floor_2x (1)
+      value: floor_grass_2x (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6119944579376299120, guid: d02553e113709bc48b1976cc590342c3, type: 3}
       propertyPath: m_RootOrder
@@ -103,7 +103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2451296597993185189, guid: d02553e113709bc48b1976cc590342c3, type: 3}
       propertyPath: m_Name
-      value: floor_2x
+      value: floor_grass_2x
       objectReference: {fileID: 0}
     - target: {fileID: 6119944579376299120, guid: d02553e113709bc48b1976cc590342c3, type: 3}
       propertyPath: m_RootOrder
