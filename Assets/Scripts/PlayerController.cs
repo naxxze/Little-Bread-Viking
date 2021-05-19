@@ -40,7 +40,10 @@ public class PlayerController : MonoBehaviour
 		
 		if(CurrColl.Count > 0 && vert > 0 && timeout > 0){
 			rb.AddForce(transform.up*jumpstr, ForceMode2D.Impulse);
-			timeout = -0.2f;
+			timeout = -0.4f;
+		} else if (CurrColl.Count > 0 && vert > 0 && timeout > -0.2){
+			rb.AddForce(transform.up*jumpstr*0.5f, ForceMode2D.Impulse);
+			timeout = -0.4f;
 		}
 		if(Mathf.Abs(hori) > 0.01) rb.AddForce(transform.right*(speed - Mathf.Abs(rb.velocity.x))*hori);
 		else if(CurrColl.Count > 0) rb.AddForce(-transform.right*speed*Mathf.Sign(rb.velocity.x)*hori*0.2f);
