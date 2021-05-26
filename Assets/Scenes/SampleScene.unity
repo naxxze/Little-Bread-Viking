@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 8123643786712643957, guid: 5380847efa54c4847bf0ba1f1cff5913, type: 3}
+      propertyPath: tint.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5380847efa54c4847bf0ba1f1cff5913, type: 3}
 --- !u!1001 &1627653281
