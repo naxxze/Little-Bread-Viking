@@ -11,7 +11,33 @@ public class ItemCollector : MonoBehaviour
             Debug.Log(String.Format("Collect item {0}",
                 Items.names[item.itemType]));
             Game.Instance.GetCollectibleSystem().Collect(item.itemType);
-            other.GetComponent<Destroyable>()?.Destroy();
+
+            SetInvisible(other.gameObject);
+            DestroyAndPlaySfx(other.gameObject);
+        }
+    }
+
+    private void SetInvisible(GameObject obj)
+    {
+        SpriteRenderer sprite = obj.GetComponent<SpriteRenderer>();
+        if (sprite)
+        {
+            sprite.color = Color.clear;
+        }
+    }
+
+    private void DestroyAndPlaySfx(GameObject obj)
+    {
+        AudioSource source = obj.GetComponent<AudioSource>();
+        Sfx sfx = obj.GetComponent<Sfx>();
+        if (source != null && sfx != null)
+        {
+            sfx.PlaySfx(source);
+            obj.GetComponent<Destroyable>()?.Destroy(source.clip.length);
+        }
+        else
+        {
+            obj.GetComponent<Destroyable>()?.Destroy();
         }
     }
 }

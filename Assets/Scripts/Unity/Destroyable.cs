@@ -5,8 +5,8 @@ public class Destroyable : MonoBehaviour
     [SerializeField]
     private GameObject root;
 
-    public void Destroy()
+    public void Destroy(float time = 0)
     {
-        Destroy(root);
+        Destroy(root, time);
     }
 }
