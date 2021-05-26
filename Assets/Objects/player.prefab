@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -3091660635238105257}
   - component: {fileID: 5547923338969297936}
   - component: {fileID: 3320574850332097806}
+  - component: {fileID: 5332365786858447903}
+  - component: {fileID: 2234162140610161681}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -157,5 +159,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a99dd9913f234fa127723ac512cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5332365786858447903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642604383597133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a2269c08295704eb1be0bd03526a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2234162140610161681}
+        m_TargetAssemblyTypeName: RespawnController, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2234162140610161681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642604383597133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01205596337dc5949b61f6e53840adc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
