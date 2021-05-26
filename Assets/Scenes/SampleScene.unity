@@ -617,6 +617,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5547923338969297936, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547923338969297936, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: jumpstr
       value: 4.5
       objectReference: {fileID: 0}
