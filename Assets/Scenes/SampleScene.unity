@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
+      propertyPath: Levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 1076914099}
+    - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
+      propertyPath: Levels.Array.data[1]
+      value: 
+      objectReference: {fileID: 1076914099}
+    - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
+      propertyPath: Levels.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076914099}
+    - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
+      propertyPath: spawned.Array.data[0]
+      value: 
+      objectReference: {fileID: 1076914099}
     - target: {fileID: 3374117106842735503, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -193,6 +209,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -373,6 +390,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01205596337dc5949b61f6e53840adc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1076914099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4441881154889243134, guid: c3bac1b2c563f014f897560a91f9bd6b, type: 3}
+  m_PrefabInstance: {fileID: 1365599830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1365599830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,6 +587,34 @@ PrefabInstance:
     - target: {fileID: 4998323150605188842, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420034}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RespawnController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5547923338969297936, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: jumpstr
