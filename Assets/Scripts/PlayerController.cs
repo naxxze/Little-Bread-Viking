@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 	public float speed;
 	public float jumpstr;
 	private float timeout;
+	private float delay = 0.3f;
 	private Rigidbody2D rb;
 	private HashSet<Collider2D> CurrColl = new HashSet<Collider2D>();
 	
@@ -40,10 +41,10 @@ public class PlayerController : MonoBehaviour
 		
 		if(CurrColl.Count > 0 && vert > 0 && timeout > 0){
 			rb.AddForce(transform.up*jumpstr, ForceMode2D.Impulse);
-			timeout = -0.4f;
-		} else if (CurrColl.Count > 0 && vert > 0 && timeout > -0.2){
+			timeout = -2*delay;
+		} else if (CurrColl.Count > 0 && vert > 0 && timeout > -delay){
 			rb.AddForce(transform.up*jumpstr*0.5f, ForceMode2D.Impulse);
-			timeout = -0.4f;
+			timeout = -2*delay;
 		}
 		if(Mathf.Abs(hori) > 0.01) rb.AddForce(transform.right*(speed - Mathf.Abs(rb.velocity.x))*hori);
 		else if(CurrColl.Count > 0) rb.AddForce(-transform.right*speed*Mathf.Sign(rb.velocity.x)*hori*0.2f);
