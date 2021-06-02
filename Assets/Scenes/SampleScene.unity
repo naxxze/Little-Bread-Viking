@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &17889773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508806336139524730, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
+  m_PrefabInstance: {fileID: 50522805}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ae8aac14bf0a446ba7f7f62eb70abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &50522805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,11 +148,11 @@ PrefabInstance:
     - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
       propertyPath: Levels.Array.data[1]
       value: 
-      objectReference: {fileID: 1076914099}
+      objectReference: {fileID: 7514276510296404156, guid: b54f0aca13c17ec4d83ae7fdd1aa508d, type: 3}
     - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
       propertyPath: Levels.Array.data[2]
       value: 
-      objectReference: {fileID: 1076914099}
+      objectReference: {fileID: 3327656950837940499, guid: 3488bae6ab9944a4abd8bb89c92e519d, type: 3}
     - target: {fileID: 1981655508810462160, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
       propertyPath: spawned.Array.data[0]
       value: 
@@ -194,7 +205,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5122149018853284551, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d526bf9d44147f44fa4ebeec701ed231, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -597,6 +609,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 17889773}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 519420034}
@@ -605,8 +621,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
+      propertyPath: death.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomSceneManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5332365786858447903, guid: afbff59cccf6e534ba4d55cbea5c03b0, type: 3}
       propertyPath: death.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
