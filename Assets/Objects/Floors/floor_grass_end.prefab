@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7624717291957363931}
   - component: {fileID: 2169545431938351793}
   - component: {fileID: 510620249330871980}
+  - component: {fileID: 7104832063728461508}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Ground
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: -0.05, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,6 +132,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.6}
   m_EdgeRadius: 0
+--- !u!66 &7104832063728461508
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685445632176464612}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 05841f1b0f80c744e806114a5a9783df, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 510620249330871980}
+    m_ColliderPaths:
+    - - X: 1999706
+        Y: -1500000
+      - X: 1999706
+        Y: 1500000
+      - X: -2500000
+        Y: 1499707
+      - X: -2499707
+        Y: -1500000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.1999413, y: -0.15}
+      - {x: 0.1999413, y: 0.15}
+      - {x: -0.25, y: 0.1499414}
+      - {x: -0.24994141, y: -0.15}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &6974272610647652196
 GameObject:
   m_ObjectHideFlags: 0

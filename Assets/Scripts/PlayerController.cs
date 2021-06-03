@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpstr;
 	private float timeout;
 	private float delay = 0.3f;
+	private float fmul = 3f;
 	private Rigidbody2D rb;
 	private HashSet<Collider2D> CurrColl = new HashSet<Collider2D>();
 	
@@ -25,30 +26,33 @@ public class PlayerController : MonoBehaviour
 		rb.freezeRotation = true;
 	}
 	
-    // Start is called before the first frame update
     void Start()
     {
         timeout = 0.0f;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+	
+    void FixedUpdate()
+    {	
+		
         float hori = Input.GetAxis("Horizontal"); 
 		float vert = Input.GetAxis("Vertical"); 
 		
 		timeout += Time.deltaTime;
 		
 		if(CurrColl.Count > 0 && vert > 0 && timeout > 0){
-			rb.AddForce(transform.up*jumpstr, ForceMode2D.Impulse);
+			rb.AddForce(transform.up*rb.mass*jumpstr, ForceMode2D.Impulse);
 			timeout = -2*delay;
 		} else if (CurrColl.Count > 0 && vert > 0 && timeout > -delay){
-			rb.AddForce(transform.up*jumpstr*0.5f, ForceMode2D.Impulse);
+			rb.AddForce(transform.up*rb.mass*jumpstr*0.5f, ForceMode2D.Impulse);
 			timeout = -2*delay;
 		}
-		if(Mathf.Abs(hori) > 0.01) rb.AddForce(transform.right*(speed - Mathf.Abs(rb.velocity.x))*hori);
-		else if(CurrColl.Count > 0) rb.AddForce(-transform.right*speed*Mathf.Sign(rb.velocity.x)*hori*0.2f);
-
+		float targetdiff = hori*speed - rb.velocity.x;
+		if(Mathf.Abs(hori) > 0.01) rb.AddForce(transform.right*rb.mass*fmul*targetdiff);
+		else if(CurrColl.Count > 0) {
+			float fmulb = fmul;
+			if(Mathf.Abs(rb.velocity.x)*fmul < 1) fmulb = fmul*Mathf.Abs(rb.velocity.x);
+			rb.AddForce(-transform.right*rb.mass*fmulb*speed*Mathf.Sign(rb.velocity.x));
+		}
     }
 }
 
